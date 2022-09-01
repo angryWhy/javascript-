@@ -21,3 +21,4 @@ const iteratorR = {
 }
 //调用
 const iterator = iteratorR[Symbol.iterator]()
+iterator.next()
