@@ -1,3 +1,19 @@
+async function bar() {
+    console.log(`2222`);
+    return new Promise(resolve => {
+        resolve()
+    })
+}
+async function foo() {
+    console.log(`11111`);
+    await bar()
+    console.log(`33333`);
+}
+
+foo()
+
+console.log(`44444`);
+
 async function async1() {
     console.log(`async---1 start`);
     await async2()

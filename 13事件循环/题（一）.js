@@ -33,3 +33,20 @@ new Promise(function (resolve) {
 }).then(function () {
     console.log("then---3");
 })
+
+//主代码：
+
+//微："then---1" `quequeMicrotask---1` "then---3" //settimeout1：微任务 then
+
+//宏： settimeout---1`  `settimeout---2`
+
+//结果：
+// "promise---1"
+// `2`
+// "then---1"
+// `quequeMicrotask---1`
+// "then---3"
+// `settimeout---1`
+// "then---2"
+// "then---4"
+//`settimeout---2`
